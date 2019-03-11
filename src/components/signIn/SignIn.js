@@ -26,7 +26,7 @@ class SignIn extends Component {
     onSubmitSignIn = () => {
 
         //by default fetch is a GET request. The second object describes the method (we wanna do post)
-        fetch('http://localhost:3000/signin', {
+        fetch('https://desolate-reaches-34910.herokuapp.com/signin', {
             
             method: 'post',
             headers: {'Content-Type': 'application/json'},

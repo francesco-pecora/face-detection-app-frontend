@@ -32,7 +32,7 @@ class Register extends Component {
     onSubmitRegister = () => {
 
         //by default fetch is a GET request. The second object describes the method (we wanna do post)
-        fetch('http://localhost:3000/register', {
+        fetch('https://desolate-reaches-34910.herokuapp.com/register', {
             
             method: 'post',
             headers: {'Content-Type': 'application/json'},
