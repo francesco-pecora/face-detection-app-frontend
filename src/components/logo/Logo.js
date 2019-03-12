@@ -3,6 +3,8 @@ import Tilt from 'react-tilt'
 import './Logo.css';
 import brain from './brain.png';
 
+//Documentation about the Tilt object on https://www.npmjs.com/package/react-tilt
+
 const Logo = () => {
 
     return(

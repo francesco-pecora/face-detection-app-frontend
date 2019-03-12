@@ -28,7 +28,7 @@ const ImageLinkForm  = ({onInputChange, onPictureSubmit}) => {
                                           pa2
                                           w-70 
                                           center' 
-
+                                value = 'Insert URL here'
                                 type='text'
                                 onChange = {onInputChange}    
                                 />

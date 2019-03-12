@@ -10,6 +10,7 @@ import Register from './components/register/Register';
 import Particles from 'react-particles-js';
 import 'tachyons';
 
+//this object sets up the background particles. Documentation at https://github.com/VincentGarreau/particles.js/
 const particlesOptions = {
     particles: {
       number: {
@@ -77,6 +78,8 @@ class App extends Component {
     const image = document.getElementById('inputimage');
     const width = Number(image.width);
     const height = Number(image.height);
+
+    //Clarifai returns the "coordinates" of the box as percentages from the edges of the picture
     return {
 
       leftCol: clarifaiFace.left_col * width,
@@ -101,6 +104,8 @@ class App extends Component {
 
     this.setState({imageUrl: this.state.input});
 
+      //This fetch returns the response from Clarifai API.
+      //The actual API call is now in the backend to protect API key
       fetch('https://desolate-reaches-34910.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
@@ -111,7 +116,9 @@ class App extends Component {
             .then (response => response.json())
             .then( response => {
               
-              if(response){   //if statement to update image
+              if(response){  
+
+                //updating entry count if image is submitted
                 fetch('https://desolate-reaches-34910.herokuapp.com/image', {
                   method: 'put',
                   headers: {'Content-Type': 'application/json'},
@@ -132,7 +139,7 @@ class App extends Component {
           })
 
           //catching errors if any
-          .catch(err => console.log("errooooor"));
+          .catch(err => console.log("An error occurred. Please try again."));
   }
 
   onRouteChange = (route) => {
@@ -150,6 +157,7 @@ class App extends Component {
 
   render() {
 
+    //destructuring variables
     const {isSignedIn, box, imageUrl, route, user} = this.state;
 
     return (
@@ -160,6 +168,7 @@ class App extends Component {
         />
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
         
+        {/* If statements to control the user moving through the different pages */}
         {route === 'home'
         ? <div>
             <Logo/>
