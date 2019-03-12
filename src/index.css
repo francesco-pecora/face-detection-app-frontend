@@ -13,7 +13,7 @@ body {
   background: -webkit-linear-gradient(89deg, rgb(193, 0, 71), rgba(220, 76, 24));
   background: linear-gradient(89deg, rgb(193, 0, 71), rgba(220, 76, 24));
 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0071a0', endColorstr='#ff0000',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=rgb(193, 0, 71), endColorstr=rgba(220, 76, 24),GradientType=1 );
 }
 
 code {
