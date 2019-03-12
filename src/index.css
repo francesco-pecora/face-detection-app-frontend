@@ -9,10 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background: linear-gradient(89deg, rgb(193, 0, 71), rgba(220, 76, 24)),
-              -o-linear-gradient(89deg, rgb(193, 0, 71), rgba(220, 76, 24)),
-              -ms-linear-gradient(89deg, rgb(193, 0, 71), rgba(220, 76, 24)),
-              -moz-linear-gradient(89deg, rgb(193, 0, 71), rgba(220, 76, 24)),
-              -webkit-linear-gradient(89deg, rgb(193, 0, 71), rgba(220, 76, 24));
+              -ms-linear-gradient(89deg, rgb(193, 0, 71), rgba(220, 76, 24));
   
 }
 
