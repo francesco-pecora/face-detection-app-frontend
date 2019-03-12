@@ -8,8 +8,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: linear-gradient(89deg, rgb(193, 0, 71), rgba(220, 76, 24));
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr=rgb(193, 0, 71), endColorstr=rgba(220, 76, 24), GradientType=0);
+  /* For WebKit (Safari, Google Chrome etc) */
+  background: -webkit-gradient(linear, left top, right top, from(#C10047), to(#DC4C18), color-stop(0.7, #DC4C18));
+
+/* For Mozilla/Gecko (Firefox etc) */
+  background: -moz-linear-gradient(left top, #C10047, #DC4C18 70%);
+
+/* For Internet Explorer 5.5 - 7 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#C10047, endColorStr=#DC4C18, GradientType=1);
+
+/* For Internet Explorer 8 */
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#C10047, endColorstr=#DC4C18, GradientType=1);
+
+  /* background: linear-gradient(89deg, rgb(193, 0, 71), rgba(220, 76, 24));
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr=rgb(193, 0, 71), endColorstr=rgba(220, 76, 24), GradientType=0); */
 
 }
 
